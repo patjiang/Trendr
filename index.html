@@ -14,50 +14,76 @@
         </div>
     </header>
 
-    <div class="container">
-        <section class="accordion">
-            <button class="accordion-btn">Core Capabilities</button>
-            <div class="accordion-content">
-                <p>With TRENDRv1, the user will be able to perform the following visualizations/analyses:</p>
-                <ul>
-                    <li>Visualize keywords from posts as a time series on a line graph by raw instance count.</li>
-                    <li>Visualize keywords on a table by instance count percentile.</li>
-                    <li>For a specific keyword, see how the upvote and downvote counts change for posts containing that keyword over time.</li>
-                    <li>Optionally limit the visualizations by any subset of the top 50 subreddits.</li>
-                </ul>
-            </div>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#queries">SQL Queries</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-            <button class="accordion-btn">Object Interactions</button>
-            <div class="accordion-content">
-                <p>Our database will consist of four main entities organized from the original data obtained from the Reddit API:</p>
-                <ul>
-                    <li><strong>Subreddits:</strong> Contains information about each subreddit.</li>
-                    <li><strong>Posts:</strong> Contains information about individual posts.</li>
-                    <li><strong>Post Type:</strong> Information about the categorization of a post.</li>
-                    <li><strong>Keywords:</strong> Table containing information about keywords in posts.</li>
-                </ul>
-            </div>
-
-            <button class="accordion-btn">Implementation Plans</button>
-            <div class="accordion-content">
-                <p>Our backend database will be a PostgreSQL database stored in AWS. We will use Python’s Psycopg2 library for backend database operations.</p>
-            </div>
-
-            <button class="accordion-btn">SQL Queries</button>
-            <div class="accordion-content">
-                <p>We will provide users with the ability to query data using SQL commands like:</p>
-                <ul>
-                    <li>INSERT, UPDATE, DELETE Queries for managing data.</li>
-                    <li>SELECT Queries for extracting specific information, such as top subreddits or most frequent keywords.</li>
-                </ul>
-            </div>
+    <main>
+        <section id="about" class="section">
+            <h2>About TRENDR</h2>
+            <p>
+                TRENDR allows you to visualize and analyze trending Reddit keywords across the top 50 subreddits from 2011-2024.
+                It is a powerful tool for market research and uncovering organic customer insights.
+            </p>
         </section>
-    </div>
+
+        <section id="features" class="section">
+            <h2>Features</h2>
+            <ul>
+                <li>Visualize keywords as time series graphs.</li>
+                <li>Analyze keyword trends across top subreddits.</li>
+                <li>Monitor upvote/downvote changes for specific keywords.</li>
+                <li>Filter visualizations by subreddit categories.</li>
+            </ul>
+        </section>
+
+        <section id="architecture" class="section">
+            <h2>Database Architecture</h2>
+            <p>
+                TRENDR's backend database is powered by PostgreSQL on AWS, with Python and Django for data interaction. 
+                The schema includes tables for Subreddits, Posts, Keywords, and Post-Keyword relationships.
+            </p>
+        </section>
+
+        <section id="queries" class="section">
+            <h2>Example SQL Queries</h2>
+            <pre>
+-- Get keywords for posts with over 100,000 upvotes:
+SELECT pk_word 
+FROM post_keyword 
+JOIN post 
+ON post_keyword.pk_post_id = post.p_post_id 
+WHERE post.score > 100000;
+
+-- Get URL of the most popular post for a specific keyword:
+SELECT url 
+FROM post 
+JOIN post_keyword
+ON post.p_post_id = post_keyword.pk_post_id 
+WHERE post_keyword.pk_word = 'lol'
+ORDER BY post.score DESC 
+LIMIT 1;
+            </pre>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>For inquiries, reach out to us at <a href="mailto:support@trendr.com">support@trendr.com</a>.</p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 TRENDR. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 TRENDR. All rights reserved.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
