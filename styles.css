@@ -10,7 +10,7 @@ body {
 .container {
     width: 70%;
     margin: auto;
-    padding: 20px;
+    padding: 5%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -19,7 +19,7 @@ header {
     background: #0078d7;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 10% 0;
 }
 
 header h1 {
@@ -51,7 +51,7 @@ nav ul li a {
     display: block;
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 5% 10%;
 }
 
 nav ul li a:hover {
@@ -59,9 +59,9 @@ nav ul li a:hover {
 }
 
 .section {
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
+    margin: 5% 0;
+    padding: 5%;
+    border-radius: 2%;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -72,8 +72,8 @@ nav ul li a:hover {
 
 pre {
     background: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 2.5%;
+    border-radius: 2.5%;
     overflow-x: auto;
 }
 
@@ -81,6 +81,6 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 5% 0;
+    margin-top: 10%;
 }
