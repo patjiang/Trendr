@@ -31,50 +31,31 @@ header p {
     font-size: 1.2em;
 }
 
-nav {
-    background: #333;
-    color: #fff;
-}
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    overflow: hidden;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-nav ul li a:hover {
-    background: #0078d7;
-}
-
-.section {
-    margin: 20px 0;
-    padding: 20px;
+.accordion-btn {
+    background-color: #0078d7;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin: 5px 0;
     border-radius: 5px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-.section h2 {
-    color: #0078d7;
+.accordion-btn:hover {
+    background-color: #005bb5;
 }
 
-pre {
-    background: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
+.accordion-content {
+    padding: 0 15px;
+    display: none;
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+    border-left: 5px solid #0078d7;
 }
 
 footer {
