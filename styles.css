@@ -113,10 +113,11 @@ section h3 {
 .accordion-container {
     width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .accordion-button {
-    width: 100%;
+    width: 60%;
     padding: 1% 0;
     margin: 10px 0;
     background-color: #ea8d6f;
