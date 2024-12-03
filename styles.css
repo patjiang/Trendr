@@ -119,21 +119,23 @@ section h3 {
     width: 100%;
     padding: 1% 0;
     margin: 10px 0;
-    background-color: #ff5722; /* Bright orange */
+    background-color: #e65100;
     color: white;
     font-size: 1.2rem;
     border: none;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .accordion-button:hover {
-    background-color: #e64a19; /* Darker orange */
+    background-color: #bf360c;
+    transform: scale(1.02);
 }
 
 .accordion-content {
-    display: none; /* Hidden by default */
+    display: none;
     padding: 10px 0;
     border: 1px solid #ddd;
 }
@@ -150,6 +152,7 @@ section h3 {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 
 
 footer {
