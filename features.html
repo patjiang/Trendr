@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Core Capabilities - TRENDR</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="trendrlogo.png">
 </head>
 <body>
     <header>
-        <div class="header">
+        <div class="container">
             <h1>TRENDR</h1>
             <p>Core Capabilities</p>
         </div>
     </header>
+
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -25,14 +25,117 @@
 
     <div class="container">
         <section>
-            <h2>Key Features</h2>
-            <p>With TRENDRv1, users can analyze Reddit data to discover trends and gain insights.</p>
-            <ul>
-                <li>Visualize keywords from posts as a time series on a line graph.</li>
-                <li>Visualize keywords in a table based on percentile of occurrence.</li>
-                <li>See how upvotes/downvotes change over time for specific keywords.</li>
+            <h2>Explore Sentiment Analyses</h2>
+            <p>Click on a category to view sentiment trends over time for various subreddits:</p>
+            <ul class="categories">
+                <li><a href="#art">Art and Creativity</a></li>
+                <li><a href="#tech">Technology and Science</a></li>
+                <li><a href="#entertainment">Entertainment and Humor</a></li>
+                <li><a href="#education">Education and Information</a></li>
+                <li><a href="#growth">Personal Growth and Motivation</a></li>
+                <li><a href="#news">News and World Events</a></li>
+                <li><a href="#gaming">Gaming and Hobbies</a></li>
+                <li><a href="#lifestyle">Community and Lifestyle</a></li>
             </ul>
         </section>
+
+        <div class="accordion-container">
+            <button class="accordion-button" id="tech">Technology and Science</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/science_sentiment_scores.png" alt="Science Sentiment Scores">
+                    <img src="sentiment_plots/technology_sentiment_scores.png" alt="Technology Sentiment Scores">
+                    <img src="sentiment_plots/Futurology_sentiment_scores.png" alt="Futurology Sentiment Scores">
+                    <img src="sentiment_plots/space_sentiment_scores.png" alt="Space Sentiment Scores">
+                    <img src="sentiment_plots/askscience_sentiment_scores.png" alt="AskScience Sentiment Scores">
+                </div>
+            </div>
+            <button class="accordion-button" id="entertainment">Entertainment and Humor</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/funny_sentiment_scores.png" alt="Funny Sentiment Scores">
+                    <img src="sentiment_plots/movies_sentiment_scores.png" alt="Movies Sentiment Scores">
+                    <img src="sentiment_plots/television_sentiment_scores.png" alt="Television Sentiment Scores">
+                    <img src="sentiment_plots/Jokes_sentiment_scores.png" alt="Jokes Sentiment Scores">
+                    <img src="sentiment_plots/OldSchoolCool_sentiment_scores.png" alt="OldSchoolCool Sentiment Scores">
+                </div>
+            </div>
+
+            <button class="accordion-button" id="art">Art and Creativity</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/Art_sentiment_scores.png" alt="Art Sentiment Scores">
+                    <img src="sentiment_plots/DIY_sentiment_scores.png" alt="DIY Sentiment Scores">
+                    <img src="sentiment_plots/WritingPrompts_sentiment_scores.png" alt="WritingPrompts Sentiment Scores">
+                    <img src="sentiment_plots/Music_sentiment_scores.png" alt="Music Sentiment Scores">
+                    <img src="sentiment_plots/EarthPorn_sentiment_scores.png" alt="EarthPorn Sentiment Scores">
+                </div>
+            </div>
+
+            <button class="accordion-button" id="education">Education and Information</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/explainlikeimfive_sentiment_scores.png" alt="ExplainLikeImFive Sentiment Scores">
+                    <img src="sentiment_plots/books_sentiment_scores.png" alt="Books Sentiment Scores">
+                    <img src="sentiment_plots/NoStupidQuestions_sentiment_scores.png" alt="NoStupidQuestions Sentiment Scores">
+                    <img src="sentiment_plots/LifeProTips_sentiment_scores.png" alt="LifeProTips Sentiment Scores">
+                    <img src="sentiment_plots/Documentaries_sentiment_scores.png" alt="Documentaries Sentiment Scores">
+                </div>
+            </div>
+
+            <button class="accordion-button" id="growth">Personal Growth and Motivation</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/GetMotivated_sentiment_scores.png" alt="GetMotivated Sentiment Scores">
+                    <img src="sentiment_plots/UpliftingNews_sentiment_scores.png" alt="UpliftingNews Sentiment Scores">
+                    <img src="sentiment_plots/personalfinance_sentiment_scores.png" alt="Personal Finance Sentiment Scores">
+                    <img src="sentiment_plots/WritingPrompts_sentiment_scores.png" alt="WritingPrompts Sentiment Scores">
+                </div>
+            </div>
+
+            <button class="accordion-button" id="growth">Personal Growth and Motivation</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/GetMotivated_sentiment_scores.png" alt="GetMotivated Sentiment Scores">
+                    <img src="sentiment_plots/UpliftingNews_sentiment_scores.png" alt="UpliftingNews Sentiment Scores">
+                    <img src="sentiment_plots/personalfinance_sentiment_scores.png" alt="Personal Finance Sentiment Scores">
+                    <img src="sentiment_plots/WritingPrompts_sentiment_scores.png" alt="WritingPrompts Sentiment Scores">
+                </div>
+            </div>
+
+            <button class="accordion-button" id="news">News and World Events</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/worldnews_sentiment_scores.png" alt="WorldNews Sentiment Scores">
+                    <img src="sentiment_plots/nottheonion_sentiment_scores.png" alt="NotTheOnion Sentiment Scores">
+                    <img src="sentiment_plots/UpliftingNews_sentiment_scores.png" alt="UpliftingNews Sentiment Scores">
+                    <img src="sentiment_plots/todayilearned_sentiment_scores.png" alt="Today I Learned Sentiment Scores">
+                </div>
+            </div>
+
+            <button class="accordion-button" id="gaming">Gaming and Hobbies</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/gaming_sentiment_scores.png" alt="Gaming Sentiment Scores">
+                    <img src="sentiment_plots/anime_sentiment_scores.png" alt="Anime Sentiment Scores">
+                    <img src="sentiment_plots/sports_sentiment_scores.png" alt="Sports Sentiment Scores">
+                    <img src="sentiment_plots/videos_sentiment_scores.png" alt="Videos Sentiment Scores">
+                </div>
+            </div>
+
+            <button class="accordion-button" id="lifestyle">Community and Lifestyle</button>
+            <div class="accordion-content">
+                <div class="grid-container">
+                    <img src="sentiment_plots/aww_sentiment_scores.png" alt="Aww Sentiment Scores">
+                    <img src="sentiment_plots/wholesomememes_sentiment_scores.png" alt="Wholesome Memes Sentiment Scores">
+                    <img src="sentiment_plots/relationship_advice_sentiment_scores.png" alt="Relationship Advice Sentiment Scores">
+                    <img src="sentiment_plots/food_sentiment_scores.png" alt="Food Sentiment Scores">
+                    <img src="sentiment_plots/travel_sentiment_scores.png" alt="Travel Sentiment Scores">
+                </div>
+            </div>
+        
+            <!-- Add similar sections for the remaining categories -->
+        </div>       
     </div>
 
     <footer>
